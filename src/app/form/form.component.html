@@ -1,1 +1,30 @@
-<p>form works!</p>
+<form>
+  <div class="form-group">
+    <label for="nameinput">Name</label>
+    <input type="text" class="form-control"
+           name = nameinput id="nameinput"
+           placeholder="Enter name" [(ngModel)]="adat.name">
+  </div>
+  <div class="form-group">
+    <label for="heightinput">Height</label>
+    <input type="number" class="form-control"
+           name = heightinput id="heightinput"
+           placeholder="Enter height" [(ngModel)]="adat.height">
+  </div>
+  <div class="form-group">
+    <label for="massinput">Mass</label>
+    <input type="number" class="form-control"
+           name = massinput id="massinput"
+           placeholder="Enter mass" [(ngModel)]="adat.mass">
+  </div>
+  <div class="form-group">
+    <label for="birth">Birth date</label>
+    <input type="text" class="form-control"
+           name = birth id="birth"
+           placeholder="Enter birth year" [(ngModel)]="adat.birth_year">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+</form>
+{{adat.name}}
+

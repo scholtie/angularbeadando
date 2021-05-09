@@ -1,1 +1,18 @@
-<p>list works!</p>
+<table class="table" *ngIf="service.adatom">
+  <thead>
+  <th>Name</th>
+  <th>Height</th>
+  <th>Mass</th>
+  <th>Birth year</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let adat of service.adatom">
+    <td>{{adat.name}}</td>
+    <td>{{adat.height}}</td>
+    <td>{{adat.mass}}</td>
+    <td>{{adat.birth_year}}</td>
+    <td><button class="btn" (click)="delete(adat)">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
