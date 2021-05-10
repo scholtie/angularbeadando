@@ -1,1 +1,9 @@
-<p>login works!</p>
+<form>
+  <div class="form-group">
+    <label for="passwordinput">Please enter the password</label>
+    <input type="text" class="form-control"
+           name = passwordinput id="passwordinput"
+           placeholder="Enter password" [(ngModel)]="pwinput">
+    <button class="btn" routerLink="login"> Login </button>
+  </div>
+</form>

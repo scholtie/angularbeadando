@@ -24,7 +24,15 @@ export class ListComponent implements OnInit {
   }
 
   delete(adat: any): void {
-    console.log('Delete: ' + adat);
+    // console.log('Delete: ' + adat);
+    const index = this.service.adatom.indexOf(adat, 0);
+    if (index > -1) {
+      this.service.adatom.splice(index, 1);
+    }
+  }
+
+  update(adat: any): void {
+    console.log('Update: ' + adat);
   }
 
 }

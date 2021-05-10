@@ -14,7 +14,7 @@ const routes: Routes = [
     component: FormComponent
   },
   {
-    path: 'details/:id',
+    path: 'login',
     component: LoginComponent
   },
 ];
