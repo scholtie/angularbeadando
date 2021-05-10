@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, NgModule, OnInit} from '@angular/core';
 import {MyAdat} from '../datastructure';
 import {ApiconnectService} from '../apiconnect.service';
+import {ListComponent} from '../list/list.component';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
+
 export class FormComponent implements OnInit {
 
+  // @NgModule({
+  //   declarations: [ListComponent],
+  //   providers: [EventEmitterService]
+  // })
   adat = new MyAdat();
 
   constructor(
@@ -16,7 +22,7 @@ export class FormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.adat = this.service.adatom[1];
+    this.adat = this.service.adatom[0];
   }
 
   save(): void {

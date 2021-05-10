@@ -25,14 +25,20 @@ export class ListComponent implements OnInit {
 
   delete(adat: any): void {
     // console.log('Delete: ' + adat);
-    const index = this.service.adatom.indexOf(adat, 0);
-    if (index > -1) {
-      this.service.adatom.splice(index, 1);
+    const delindex = this.service.adatom.indexOf(adat, 0);
+    if (delindex > -1) {
+      this.service.adatom.splice(delindex, 1);
     }
   }
 
-  update(adat: any): void {
-    console.log('Update: ' + adat);
+  update(adat: any): number {
+    // console.log('Update: ' + adat);
+    const updindex = this.service.adatom.indexOf(adat, 0);
+    if (updindex > -1) {
+      console.log(updindex);
+    }
+    return updindex;
   }
+
 
 }
