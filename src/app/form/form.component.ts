@@ -18,11 +18,12 @@ export class FormComponent implements OnInit {
   adat = new MyAdat();
 
   constructor(
-    private service: ApiconnectService
+    private service: ApiconnectService,
+    // private listComponent: ListComponent
   ) { }
 
   ngOnInit(): void {
-    this.adat = this.service.adatom[0];
+    // this.adat = this.service.adatom[1];
   }
 
   save(): void {

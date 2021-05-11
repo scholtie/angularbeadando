@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedin = false;
       alert('Wrong password');
     }
+    console.log(this.isLoggedin);
   }
 
 }

@@ -7,11 +7,22 @@ import {LoginComponent} from './login/login.component';
   providedIn: 'root'
 })
 export class LoginguardGuard implements CanActivate, CanActivateChild {
+
+  constructor(private loginComponent: LoginComponent) {
+  }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    alert('Please log in to view this content.');
-    return false;
+    if (this.loginComponent.isLoggedin === true)
+    {
+      return true;
+    }
+    else
+    {
+      // alert('Please log in to view this content.');
+      return true;
+    }
+    console.log(this.loginComponent.isLoggedin);
   }
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
