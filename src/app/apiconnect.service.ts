@@ -9,7 +9,7 @@ import {ListComponent} from './list/list.component';
 })
 export class ApiconnectService{
 
-  // public adatom: MyAdat[] = [];
+  public adatom: MyAdat[] = [];
   // apiUrl = 'https://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion.json';
 
   constructor(
@@ -22,8 +22,8 @@ export class ApiconnectService{
   // }
 
   // public fetch(): Observable<any> {
-  //   // return this.http.get('https://swapi.dev/api/people');
+  //   return this.http.get('https://swapi.dev/api/people');
   //   // return this.http.get('https://api.fbi.gov/wanted/v1/list');
-  //   return this.http.get('https://ddragon.leagueoflegends.com/cdn/11.10.1/data/en_US/champion.json');
+  //   // return this.http.get('https://ddragon.leagueoflegends.com/cdn/11.10.1/data/en_US/champion.json');
   // }
 }

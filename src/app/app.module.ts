@@ -25,7 +25,7 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginComponent, ApiconnectService],
+  providers: [LoginComponent, ApiconnectService, ListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

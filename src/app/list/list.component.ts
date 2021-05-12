@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiconnectService} from '../apiconnect.service';
 import {HttpClient} from '@angular/common/http';
-import {MyAdat} from '../datastructure';
 
 @Component({
   selector: 'app-list',
@@ -10,16 +9,16 @@ import {MyAdat} from '../datastructure';
 })
 export class ListComponent implements OnInit{
 
-  public adatom: MyAdat[];
+  // public adatom: MyAdat[];
+  updateid = 4;
 
   constructor(
     public service: ApiconnectService,
-    private httpClient: HttpClient,
-    private myAdat: MyAdat
+    private httpClient: HttpClient
   ) { }
 
   // ngOnInit(): void {
-  //   if (this.service.adatom.length === 0)
+  //   // if (this.service.adatom.length === 0)
   //   {
   //     this.service.fetch().subscribe(
   //       // status: 1xx, 2xx, 3xx
@@ -33,15 +32,17 @@ export class ListComponent implements OnInit{
     this.getQuotes();
   }
 
-  getQuotes(): void{
-    this.httpClient.get<any>('https://anapioficeandfire.com/api/houses').subscribe(
-      response => {
-        console.log(response);
-        this.adatom = response;
-        localStorage.setItem('data', JSON.stringify(this.adatom));
+  getQuotes(): void {
+    if (this.service.adatom.length === 0) {
+      this.httpClient.get<any>('https://anapioficeandfire.com/api/houses').subscribe(
+        response => {
+          console.log(response);
+          this.service.adatom = response;
+          // localStorage.setItem('data', JSON.stringify(this.service.adatom));
 
-      }
-    );
+        }
+      );
+    }
   }
 
   // ngOnInit() {
