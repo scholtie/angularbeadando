@@ -4,6 +4,7 @@ import {ListComponent} from './list/list.component';
 import {FormComponent} from './form/form.component';
 import {LoginComponent} from './login/login.component';
 import {LoginguardGuard} from './loginguard.guard';
+import {UpdateComponent} from './update/update.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'form',
     component: FormComponent,
+    canActivate: [LoginguardGuard]
+  },
+  {
+    path: 'update',
+    component: UpdateComponent,
     canActivate: [LoginguardGuard]
   },
   {

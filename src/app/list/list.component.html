@@ -1,17 +1,17 @@
 <table class="table" *ngIf="service.adatom">
   <thead>
   <th>Name</th>
-  <th>Height</th>
-  <th>Mass</th>
-  <th>Birth year</th>
+  <th>Region</th>
+  <th>Words</th>
+  <th>Coat Of Arms</th>
   <th></th>
   </thead>
   <tbody>
   <tr *ngFor="let adat of service.adatom">
     <td>{{adat.name}}</td>
-    <td>{{adat.height}}</td>
-    <td>{{adat.mass}}</td>
-    <td>{{adat.birth_year}}</td>
+    <td>{{adat.region}}</td>
+    <td>{{adat.words}}</td>
+    <td>{{adat.coatOfArms}}</td>
     <td><button type="button" class="btn btn-outline-danger" (click)="delete(adat)">Delete</button></td>
     <td><button type="button" class="btn btn-info" (click)="update(adat)">Update</button></td>
   </tr>

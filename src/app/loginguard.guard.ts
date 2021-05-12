@@ -22,7 +22,7 @@ export class LoginguardGuard implements CanActivate, CanActivateChild {
       // alert('Please log in to view this content.');
       return true;
     }
-    console.log(this.loginComponent.isLoggedin);
+    // console.log(this.loginComponent.isLoggedin);
   }
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,

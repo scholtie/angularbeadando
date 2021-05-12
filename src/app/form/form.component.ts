@@ -16,6 +16,7 @@ export class FormComponent implements OnInit {
   //   providers: [EventEmitterService]
   // })
   adat = new MyAdat();
+  // data =  this.service.adatom = JSON.parse(localStorage.getItem('data') as string);
 
   constructor(
     private service: ApiconnectService,
@@ -29,6 +30,7 @@ export class FormComponent implements OnInit {
   save(): void {
     // replace not add again, csak akkor ha ki van toltve az adat
     this.service.adatom.push(this.adat);
+    // localStorage.setItem('data', JSON.stringify(this.data));
     this.adat = new MyAdat();
   }
 

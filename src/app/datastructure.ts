@@ -1,6 +1,6 @@
 export class MyAdat {
   name: string;
-  height: number;
-  mass: number;
-  birth_year: string;
+  region: string;
+  words: string;
+  coatOfArms: string;
 }

@@ -8,13 +8,16 @@ import { FormComponent } from './form/form.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {ApiconnectService} from './apiconnect.service';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     FormComponent,
-    LoginComponent
+    LoginComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginComponent],
+  providers: [LoginComponent, ApiconnectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
