@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {MyAdat} from '../datastructure';
 import {ApiconnectService} from '../apiconnect.service';
 import {ListComponent} from '../list/list.component';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-update',
@@ -14,7 +15,8 @@ export class UpdateComponent implements OnInit {
 
   constructor(
     private service: ApiconnectService,
-    private listComponent: ListComponent
+    private listComponent: ListComponent,
+    // @Inject(DOCUMENT) private document: Document
   ) { }
 
   ngOnInit(): void {

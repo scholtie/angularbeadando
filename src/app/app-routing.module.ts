@@ -5,6 +5,7 @@ import {FormComponent} from './form/form.component';
 import {LoginComponent} from './login/login.component';
 import {LoginguardGuard} from './loginguard.guard';
 import {UpdateComponent} from './update/update.component';
+import {LogoutGuard} from './logout.guard';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [LogoutGuard]
   },
 ];
 

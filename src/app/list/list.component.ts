@@ -10,7 +10,7 @@ import {HttpClient} from '@angular/common/http';
 export class ListComponent implements OnInit{
 
   // public adatom: MyAdat[];
-  updateid = 4;
+  updateid = 3;
 
   constructor(
     public service: ApiconnectService,
@@ -34,7 +34,7 @@ export class ListComponent implements OnInit{
 
   getQuotes(): void {
     if (this.service.adatom.length === 0) {
-      this.httpClient.get<any>('https://anapioficeandfire.com/api/houses').subscribe(
+      this.httpClient.get<any>('https://www.anapioficeandfire.com/api/houses?page=1&pageSize=15').subscribe(
         response => {
           console.log(response);
           this.service.adatom = response;
@@ -65,6 +65,10 @@ export class ListComponent implements OnInit{
       console.log(updindex);
     }
     return updindex;
+  }
+
+  logout(): void {
+    localStorage.removeItem('token');
   }
 
 

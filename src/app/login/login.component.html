@@ -1,7 +1,11 @@
 <form>
   <div class="form-group">
-    <label for="passwordinput">Please enter the password</label>
+    <label for="userinput">Please enter the username</label>
     <input type="text" class="form-control"
+           name = userinput id="userinput"
+           placeholder="Enter Username" [(ngModel)]="userinput">
+    <label for="passwordinput">Please enter the password</label>
+    <input type="password" class="form-control"
            name = passwordinput id="passwordinput"
            placeholder="Enter password" [(ngModel)]="pwinput">
     <button type="button" class="btn btn-primary" (click)="logincheck()"> Login </button>

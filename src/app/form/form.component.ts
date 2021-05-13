@@ -1,7 +1,8 @@
-import {Component, EventEmitter, NgModule, OnInit} from '@angular/core';
+import {Component, EventEmitter, Inject, NgModule, OnInit} from '@angular/core';
 import {MyAdat} from '../datastructure';
 import {ApiconnectService} from '../apiconnect.service';
 import {ListComponent} from '../list/list.component';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-form',
@@ -19,6 +20,7 @@ export class FormComponent implements OnInit {
   // data =  this.service.adatom = JSON.parse(localStorage.getItem('data') as string);
 
   constructor(
+    // @Inject(DOCUMENT) private document: Document,
     private service: ApiconnectService,
     // private listComponent: ListComponent
   ) { }
