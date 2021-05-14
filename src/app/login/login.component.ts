@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedin = true;
       alert('Successful login');
       localStorage.setItem('token', JSON.stringify(this.username));
-      this.document.location.href = 'http://localhost:4200/list';
+      this.document.location.href = '/list';
     }
     else{
       this.isLoggedin = false;

@@ -33,10 +33,11 @@ export class ListComponent implements OnInit{
   }
 
   getHouses(): void {
-    if (this.service.adatom.length === 0) {
+     if (this.service.adatom.length === 0) {
       this.httpClient.get<any>('https://www.anapioficeandfire.com/api/houses?page=1&pageSize=15').subscribe(
         response => {
           this.service.adatom = response;
+          localStorage.setItem('data', JSON.stringify(this.service.adatom));
 
         }
       );
