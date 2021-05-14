@@ -12,6 +12,7 @@ import {DOCUMENT} from '@angular/common';
 export class UpdateComponent implements OnInit {
 
   adat = new MyAdat();
+  idupdate;
 
   constructor(
     private service: ApiconnectService,
@@ -20,7 +21,16 @@ export class UpdateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.adat = this.service.adatom[this.listComponent.updateid];
+    // this.adat = this.service.adatom[this.listComponent.updateid];
+  }
+
+  UpdateIdSet(): void
+  {
+    this.adat = this.service.adatom[this.idupdate];
+    if (this.idupdate > this.service.adatom.length || this.idupdate < 0)
+    {
+      alert('ID not found');
+    }
   }
 
   save(): void {
@@ -28,6 +38,10 @@ export class UpdateComponent implements OnInit {
     this.service.adatom.push(this.adat);
     this.service.adatom.splice(-1, 1);
     this.adat = new MyAdat();
+  }
+
+  logout(): void {
+    localStorage.removeItem('token');
   }
 
 }

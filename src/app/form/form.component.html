@@ -1,3 +1,7 @@
+<a (click)="logout()" href="/login"
+   role="button"
+   class="btn btn-outline-danger"> Logout
+</a>
 <form>
   <div class="form-group">
     <label for="nameinput">Name</label>
@@ -24,7 +28,7 @@
            placeholder="Enter coats of arms" [(ngModel)]="adat.coatOfArms">
   </div>
 
-  <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+  <a href="/list"><button type="submit" class="btn btn-primary" (click)="save()">Submit</button></a>
 </form>
 <!--{{adat.name}}-->
 

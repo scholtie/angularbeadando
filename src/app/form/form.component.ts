@@ -17,7 +17,6 @@ export class FormComponent implements OnInit {
   //   providers: [EventEmitterService]
   // })
   adat = new MyAdat();
-  // data =  this.service.adatom = JSON.parse(localStorage.getItem('data') as string);
 
   constructor(
     // @Inject(DOCUMENT) private document: Document,
@@ -34,6 +33,10 @@ export class FormComponent implements OnInit {
     this.service.adatom.push(this.adat);
     // localStorage.setItem('data', JSON.stringify(this.data));
     this.adat = new MyAdat();
+  }
+
+  logout(): void {
+    localStorage.removeItem('token');
   }
 
 }
